@@ -1,0 +1,7 @@
+Django>=5.2,<6.1
+djangorestframework>=3.16,<3.17
+django-cors-headers>=4.7,<5.0
+Pillow>=11.0,<13.0
+google-genai>=1.40,<2.0
+gunicorn>=23.0,<24.0
+python-dotenv>=1.1,<2.0

@@ -1,0 +1,14 @@
+[Unit]
+Description=AI Car Mechanic Django API
+After=network.target
+
+[Service]
+User=ubuntu
+Group=www-data
+WorkingDirectory=/home/ubuntu/ai-car-mechanic/backend
+Environment="PATH=/home/ubuntu/ai-car-mechanic/backend/.venv/bin"
+ExecStart=/home/ubuntu/ai-car-mechanic/backend/.venv/bin/gunicorn config.wsgi:application --bind 127.0.0.1:8000 --workers 2 --timeout 120
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
